@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "name": "fake_modusign",
+  "description": "문서를 관리하고 참가자가 문서에 서명이 가능한 `우리싸인 API 서버`를 개발해야 합니다. `공개용 API(가입/로그인/참가자 인증)`는 개발이 되어 있는 상태입니다.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node src/server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/james-taeil/fake_modusign.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/james-taeil/fake_modusign/issues"
+  },
+  "homepage": "https://github.com/james-taeil/fake_modusign#readme"
+}

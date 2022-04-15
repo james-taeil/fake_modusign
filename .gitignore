@@ -1,0 +1,10 @@
+# compiled output
+/node_modules
+
+# Logs
+# OS
+# Tests
+# IDEs and editors
+# IDE - VSCode
+/package-lock.json
+.env
