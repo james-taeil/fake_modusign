@@ -20,7 +20,7 @@ export default class UserController {
 
   signUp = async (req, res) => {
     const { email, password, name } = req.body;
-
+    console.log(req)
 
   }
 
