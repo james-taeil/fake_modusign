@@ -1,16 +1,17 @@
 import { Router } from "express";
 import { BadRequestException } from "../../common/exceptions/index.js";
-import { wrap } from '../../lib/'
-import { UserRepository } from "./user.repository";
+import { wrap } from '../../lib/request-handler.js'
+import { UserRepository } from "./user.repository.js";
+import { userService } from "./user.service.js"
 
 
 export default class UserController {
   path = '/users';
   router = Router();
 
-  userService = new this.userService(new UserRepository());
+  // userService = new this.userService(new UserRepository());
 
-  constructor(){
+  constructor() {
     this.initalizeRoutes();
   }
 
@@ -19,13 +20,13 @@ export default class UserController {
 
     router
       .post('/signup', wrap(this.signUp));
-    
+
     this.router.use(this.path, router);
   }
 
   signUp = async (req, res) => {
     const { email, password, name } = req.body;
-    
+
     if (!email) {
       throw new BadRequestException('이메일은 필수입니다.');
     }
@@ -40,7 +41,7 @@ export default class UserController {
       throw new BadRequestException('이름은 필수입니다.');
     }
 
-    const { count: hasEmail } = this.userService
+    // const { count: hasEmail } = this.userService
 
   }
 
