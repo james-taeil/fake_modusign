@@ -1,37 +1,45 @@
-export class User {
+export class Participant {
   constructor(
     id,
-    email,
+    documentId,
     name,
-    password,
+    email,
+    status,
+    signature,
     createdAt,
     updatedAt,
   ) {
     this.id = id
-    this.email = email
+    this.documentId = documentId
     this.name = name
-    this.password = password
+    this.email = email
+    this.status = status
+    this.signature = signature
     this.createdAt = createdAt
     this.updatedAt = updatedAt
   }
 
   static fromJson(json) {
     if (!json) return null;
-    return new User(
+    return new Participant(
       json.id,
-      json.email,
+      json.document_id,
       json.name,
-      json.password,
+      json.email,
+      json.status,
+      json.signature,
       new Date(json.created_at),
       new Date(json.updated_at),
     );
   }
 
-  toJson() {
+  toJson(){
     return {
       id: this.id,
-      name: this.name,
+      documentId: this.documentId,
       email: this.email,
+      name: this.name,
+      status: this.status,
       createdAt: this.createdAt.toISOString(),
       updatedAt: this.updatedAt.toISOString(),
     };

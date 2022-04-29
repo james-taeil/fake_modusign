@@ -21,7 +21,7 @@ export class UserRepository {
   countByEmail(email) {
     return db
       .prepare(
-        `SELECT COUNT(*) as count FROM ${this.tableName} WHERE email = ?`
+        `SELECT COUNT(*) as count FROM ${this.tableName} WHERE email = ?`,
       )
       .get(email);
   }
@@ -34,7 +34,7 @@ export class UserRepository {
           this.tableName,
           '(id, email, name, password, created_at, updated_at)',
           'VALUES',
-          '($id, $email, $name, $password, $create_at, $updated_at)',
+          '($id, $email, $name, $password, $created_at, $updated_at)',
         ].join(' '),
       )
       .run(raw);
