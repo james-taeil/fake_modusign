@@ -8,6 +8,7 @@ export class ParticipantService {
     this.participantRepository = participantRepository
   }
 
+
   issueAccessToken({ documentId, email }){
     const participant = this.participantRepository.findByDocumentIdAndEmail(
       documentId,
@@ -27,5 +28,13 @@ export class ParticipantService {
       token,
       participant.toJson(),
     ];
+  }
+
+  readDocument() {
+
+  }
+
+  signParicipant() {
+    
   }
 }
