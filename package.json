@@ -1,14 +1,23 @@
 {
   "dependencies": {
-    "express": "^4.17.3"
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^7.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
   },
   "name": "fake_modusign",
   "description": "문서를 관리하고 참가자가 문서에 서명이 가능한 `우리싸인 API 서버`를 개발해야 합니다. `공개용 API(가입/로그인/참가자 인증)`는 개발이 되어 있는 상태입니다.",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "type": "module",
   "scripts": {
-    "start": "node src/server",
+    "start": "nodemon src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
