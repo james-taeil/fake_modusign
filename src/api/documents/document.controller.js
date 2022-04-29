@@ -33,6 +33,10 @@ export default class DocumentController {
     if (participants.length < 2 || participants.length > 10) {
       throw new BadRequestException('참가자는 최소 2명, 최대 10명입니다.') 
     }
+
+    const userId = req.session.id;
+
+    
     
     throw new Error('Method not implemented.');
   }
